@@ -7,138 +7,143 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/main.css">
+
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+
+  <script src="./animations/index.js" defer></script>
 </head>
 <body>
-  <div class="container">
-
-    <header class="header">
-      <div class="header__page-title page-title"><a href="#">MNTN</a></div>
-      <nav class="header__navigation">
-        <div class="header__navigation-item"><a href="#">Equipment</a></div>
-        <div class="header__navigation-item"><a href="#">About us</a></div>
-        <div class="header__navigation-item"><a href="#">Blog</a></div>
-      </nav>
-      <div class="header__account">
-        <img class="header__account-icon" src="./assets/icons/account.svg" alt="account">
-        <span>Account</span>
-      </div>
-    </header>
-  
-    <main class="main">
-  
-      <div class="hero">
-        <div class="hero__follow-us">
-          <div class="hero__follow-us-text">Follow us</div>
-          <img class="hero__follow-us-icon" src="./assets/icons/instagram.svg" alt="instagram">
-          <img class="hero__follow-us-icon" src="./assets/icons//twitter.svg" alt="twitter">
+  <div id="smooth-wrapper" class="container">
+      <header class="header">
+        <div class="header__page-title page-title"><a href="#">MNTN</a></div>
+        <nav class="header__navigation">
+          <div class="header__navigation-item"><a href="#">Equipment</a></div>
+          <div class="header__navigation-item"><a href="#">About us</a></div>
+          <div class="header__navigation-item"><a href="#">Blog</a></div>
+        </nav>
+        <div class="header__account">
+          <img class="header__account-icon" src="./assets/icons/account.svg" alt="account">
+          <span>Account</span>
         </div>
-        <div class="hero__title">
-          <h3 class="hero__title-md subtitle">A Hiking guide</h3>
-          <h1 class="hero__title-xl">Be Prepared For The Mountains And beyond!</h1>
-          <div class="hero__title-scroll">
-            <button class="hero__title-scroll-btn">scroll down</button>
-            <img class="hero__title-scroll-img" src="./assets/icons/arrow_downward.svg" alt="arrow down">
+      </header>
+    <div id="smooth-content">
+      <main class="main">
+        <div class="hero">
+          <div class="hero__follow-us">
+            <div class="hero__follow-us-text">Follow us</div>
+            <img class="hero__follow-us-icon" src="./assets/icons/instagram.svg" alt="instagram">
+            <img class="hero__follow-us-icon" src="./assets/icons//twitter.svg" alt="twitter">
+          </div>
+          <div class="hero__title">
+            <h3 class="hero__title-md subtitle">A Hiking guide</h3>
+            <h1 class="hero__title-xl">Be Prepared For The Mountains And beyond!</h1>
+            <div class="hero__title-scroll">
+              <button class="hero__title-scroll-btn">scroll down</button>
+              <img data-speed="0.5" class="hero__title-scroll-img" src="./assets/icons/arrow_downward.svg" alt="arrow down">
+            </div>
+          </div>
+          <div class="hero__steps">
+            <div class="hero__steps-item hero__steps-item_active">Start</div>
+            <div class="hero__steps-item">01</div>
+            <div class="hero__steps-item">02</div>
+            <div class="hero__steps-item">03</div>
           </div>
         </div>
-        <div class="hero__steps">
-          <div class="hero__steps-item hero__steps-item_active">Start</div>
-          <div class="hero__steps-item">01</div>
-          <div class="hero__steps-item">02</div>
-          <div class="hero__steps-item">03</div>
-        </div>
-      </div>
-
-      <div class="content">
-        <div class="content__item">
-          <div class="content__item-text">
-            <div class="content__text-num">01</div>
-            <h3 class="subtitle">Get Started</h3>
-            <h2 class="content__text-title">What level of  hiker are you?</h2>
-            <p class="content__text-description">
-              Determining what level of hiker you are can be an important tool 
-              when planning future hikes. This hiking level guide will help you plan 
-              hikes according to different hike ratings set by various websites like 
-              All Trails and Modern Hiker. What type of hiker are you – novice, moderate, 
-              advanced moderate, expert, or expert backpacker? 
-            </p>
-            <button class="content__text-btn">
-              read more
-              <img class="content__text-btn-arrow" src="./assets/icons/arrow_right.svg" alt="read more arrow icon">
-            </button>
+        <div class="content">
+          <div class="content__item">
+            <div class="content__item-text">
+              <div class="content__text-num">01</div>
+              <h3 class="subtitle">Get Started</h3>
+              <h2 class="content__text-title">What level of  hiker are you?</h2>
+              <p class="content__text-description">
+                Determining what level of hiker you are can be an important tool
+                when planning future hikes. This hiking level guide will help you plan
+                hikes according to different hike ratings set by various websites like
+                All Trails and Modern Hiker. What type of hiker are you – novice, moderate,
+                advanced moderate, expert, or expert backpacker?
+              </p>
+              <button class="content__text-btn">
+                read more
+                <img class="content__text-btn-arrow" src="./assets/icons/arrow_right.svg" alt="read more arrow icon">
+              </button>
+            </div>
+            <img class="content__item-img" src="./assets/images/01.png" alt="Get Started image">
           </div>
-          <img class="content__item-img" src="./assets/images/01.png" alt="Get Started image">
-        </div>
-        <div class="content__item">
-          <img class="content__item-img" src="./assets/images/02.png" alt="Hiking Essentials image">
-          <div class="content__item-text">
-            <div class="content__text-num">02</div>
-            <h3 class="subtitle">Hiking Essentials</h3>
-            <h2 class="content__text-title">Picking the right Hiking Gear!</h2>
-            <p class="content__text-description">
-              The nice thing about beginning hiking is that you don’t 
-              really need any special gear, you can probably get away with things you already have.
-              Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.
-            </p>
-            <button class="content__text-btn">
-              read more
-              <img class="content__text-btn-arrow" src="./assets/icons/arrow_right.svg" alt="read more arrow icon">
-            </button>
+          <div class="content__item">
+            <img class="content__item-img" src="./assets/images/02.png" alt="Hiking Essentials image">
+            <div class="content__item-text">
+              <div class="content__text-num">02</div>
+              <h3 class="subtitle">Hiking Essentials</h3>
+              <h2 class="content__text-title">Picking the right Hiking Gear!</h2>
+              <p class="content__text-description">
+                The nice thing about beginning hiking is that you don’t
+                really need any special gear, you can probably get away with things you already have.
+                Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.
+              </p>
+              <button class="content__text-btn">
+                read more
+                <img class="content__text-btn-arrow" src="./assets/icons/arrow_right.svg" alt="read more arrow icon">
+              </button>
+            </div>
+          </div>
+          <div class="content__item">
+            <div class="content__item-text">
+              <div class="content__text-num">03</div>
+              <h3 class="subtitle">where you go is the key</h3>
+              <h2 class="content__text-title">Understand Your Map & Timing</h2>
+              <p class="content__text-description">
+                To start, print out the hiking guide and map.
+                If it’s raining, throw them in a Zip-Lock bag.
+                Read over the guide, study the map, and have a
+                good idea of what to expect. I like to know what
+                my next landmark is as I hike. For example,
+                I’ll read the guide and know that say, in a mile,
+                I make a right turn at the junction..
+              </p>
+              <button class="content__text-btn">
+                <div>read more</div>
+                <img class="content__text-btn-arrow" src="./assets/icons/arrow_right.svg" alt="read more arrow icon">
+              </button>
+            </div>
+            <img class="content__item-img" src="./assets/images/03.png" alt="where you go is the key image">
           </div>
         </div>
-        <div class="content__item">
-          <div class="content__item-text">
-            <div class="content__text-num">03</div>
-            <h3 class="subtitle">where you go is the key</h3>
-            <h2 class="content__text-title">Understand Your Map & Timing</h2>
-            <p class="content__text-description">
-              To start, print out the hiking guide and map. 
-              If it’s raining, throw them in a Zip-Lock bag. 
-              Read over the guide, study the map, and have a 
-              good idea of what to expect. I like to know what 
-              my next landmark is as I hike. For example, 
-              I’ll read the guide and know that say, in a mile, 
-              I make a right turn at the junction..
-            </p>
-            <button class="content__text-btn">
-              <div>read more</div>
-              <img class="content__text-btn-arrow" src="./assets/icons/arrow_right.svg" alt="read more arrow icon">
-            </button>
+      </main>
+      <footer class="footer">
+        <div class="footer__info">
+          <div class="footer__page-title page-title">MNTN</div>
+          <p class="footer__info-text">
+            Get out there & discover your next slope, mountain & destination!
+          </p>
+          <div class="footer__info-copyright">Copyright 2023 MNTN, Inc. Terms & Privacy</div>
+        </div>
+      
+        <div class="footer__more">
+          <div class="footer__more-item">
+            <div class="footer__more-item-title">More on The Blog</div>
+            <nav class="footer__more-item-nav">
+              <div><a href="#">About MNTN</a></div>
+              <div><a href="#">Contributors & Writers</a></div>
+              <div><a href="#">Write For Us</a></div>
+              <div><a href="#">Contact Us</a></div>
+              <div><a href="#">Privacy Policy</a></div>
+            </nav>
           </div>
-          <img class="content__item-img" src="./assets/images/03.png" alt="where you go is the key image">
+          <div class="footer__more-item">
+            <div class="footer__more-item-title">More on MNTN</div>
+            <nav class="footer__more-item-nav">
+              <div><a href="#">The Team</a></div>
+              <div><a href="#">Jobs</a></div>
+              <div><a href="#">Press</a></div>
+            </nav>
+          </div>
         </div>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer__info">
-        <div class="footer__page-title page-title">MNTN</div>
-        <p class="footer__info-text">
-          Get out there & discover your next slope, mountain & destination!
-        </p>
-        <div class="footer__info-copyright">Copyright 2023 MNTN, Inc. Terms & Privacy</div>
-      </div>
-    
-      <div class="footer__more">
-        <div class="footer__more-item">
-          <div class="footer__more-item-title">More on The Blog</div>
-          <nav class="footer__more-item-nav">
-            <div><a href="#">About MNTN</a></div>
-            <div><a href="#">Contributors & Writers</a></div>
-            <div><a href="#">Write For Us</a></div>
-            <div><a href="#">Contact Us</a></div>
-            <div><a href="#">Privacy Policy</a></div>
-          </nav>
-        </div>
-        <div class="footer__more-item">
-          <div class="footer__more-item-title">More on MNTN</div>
-          <nav class="footer__more-item-nav">
-            <div><a href="#">The Team</a></div>
-            <div><a href="#">Jobs</a></div>
-            <div><a href="#">Press</a></div>
-          </nav>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </div>
 </body>
 </html>
