@@ -4,10 +4,27 @@
   font-size: 1.7rem;
 }
 
+/* hero */
+.hero__title-scroll-btn {
+  font-family: var(--font-family-secondary);
+  font-size: clamp(14px, 1vw, 1rem);
+  border: 0;
+  background: transparent;
+}
+
+.hero__title-scroll-btn:focus {
+  outline: none;
+}
+
+.hero__title-scroll-img {
+  width: clamp(10px, 1vw, 1rem);
+}
+
+/* subtitle */
 .subtitle {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: clamp(14px, 14px, 1rem);
   font-weight: bold;
   letter-spacing: 0.3rem;
   color: var(--color-secondary);
@@ -23,6 +40,7 @@
   background-color: var(--color-secondary);
 }
 
+/* content */
 .content__item-text {
   position: relative;
   max-width: 35.1rem;
@@ -31,6 +49,10 @@
   gap: 1.5rem;
   margin: auto 0;
   margin-left: 8.3rem;
+}
+
+.content__item-img {
+  width: 100%;
 }
 
 .content__text-num {
@@ -46,14 +68,14 @@
 
 .content__text-title {
   font-family: var(--font-family-primary);
-  font-size: 3.6rem;
+  font-size: clamp(1rem, 4vw, 3.6rem);
   font-weight: 600;
   line-height: 100%;
 }
 
 .content__text-description {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.8rem;
 }
 
@@ -71,6 +93,7 @@
   outline: none;
 }
 
+/* footer */
 .footer__more-item-title {
   font-size: 1.3rem;
   line-height: 1.8rem;
@@ -84,4 +107,66 @@
   font-size: 1rem;
   font-weight: 500;
   gap: 0.9rem;
+}
+
+/* media */
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .subtitle::before {
+    content: "";
+    display: none;
+  }
+
+  .content__item-text {
+    gap: 1rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .content__text-num {
+    left: -1rem;
+    top: -3rem;
+    font-size: 2rem;
+  }
+
+  .content__text-description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .content__text-btn {
+    font-size: 14px;
+  }
+
+  .content__text-btn-arrow {
+    width: 16px;
+  }
+
+  .content__item-img {
+    display: none;
+  }
+
+  .footer__more-item-title {
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .footer__more-item-nav {
+    font-size: 14px;
+    gap: 5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .content__item-img {
+    position: absolute;
+    left: -50px;
+    opacity: 50%;
+    width: 250px;
+  }
 }

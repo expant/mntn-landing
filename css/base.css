@@ -9,35 +9,22 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: local("Gilroy Light"),
-    local("Gilroy-Light"),
-    url("../assets/fonts/gilroy/Gilroy-Light.woff2") format("woff2"),
-    url("../assets/fonts/gilroy/Gilroy-Light.woff") format("woff"),
-}
-
-/* @font-face {
-  font-family: "Chronicle Display", "Arial", sans-serif;
-  src: url("../assets/fonts/chronicle-display/Chronicle\ Display\ Black.otf");
-  font-weight: 500;
+  src: local("Gilroy ExtraBold"),
+    local("Gilroy-ExtraBold"),
+    url("../assets/fonts/gilroy/Gilroy-ExtraBold.otf") format("otf"),
+    url("../assets/fonts/gilroy/Gilroy-ExtraBold.woff") format("woff2"),
+    url("../assets/fonts/gilroy/Gilroy-ExtraBold.woff2") format("woff");
+  font-weight: bold;
 }
 
 @font-face {
-  font-family: "Chronicle Display", "Arial", sans-serif;
-  src: url("../assets/fonts/chronicle-display/Chronicle\ Display\ Semibold.otf");
-  font-weight: bold;
-} */
-
-/* @font-face {
-  font-family: "Gilroy", "Arial", sans-serif;
-  src: url("../assets/fonts/gilroy/Gilroy-Light.otf");
-  font-weight: bold;
-} */
-
-/* @font-face {
-  font-family: "Gilroy", "Arial", sans-serif;
-  src: url("../assets/fonts/gilroy/Gilroy-ExtraBold.otf");
-  font-weight: bolder;
-} */
+  font-family: "Gilroy";
+  src: local("Gilroy Light"),
+    local("Gilroy-Light"),
+    url("../assets/fonts/gilroy/Gilroy-Light.woff") format("woff2"),
+    url("../assets/fonts/gilroy/Gilroy-Light.woff2") format("woff");
+  font-weight: 500;
+}
 
 /* reset */
 *,
