@@ -31,11 +31,19 @@
   scroll-behavior: unset;
 }
 
+.mobile-menu__item {
+  position: relative;
+  height: 2.8rem;
+  font-size: 2rem;
+  color: var(--color-primary);
+  z-index: 200;
+}
+
 .mobile-menu__item-link {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  height: calc(100% / 2);
+  height: 100%;
 }
 
 .mobile-menu__item-link-text {
@@ -87,11 +95,6 @@
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-}
-
-.mobile-menu__item {
-  font-size: 2rem;
-  color: var(--color-primary);
 }
 
 /* hero */
