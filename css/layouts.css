@@ -5,12 +5,13 @@ html {
 body {
   font-family: var(--font-family-secondary);
   font-weight: 100;
-  background: 
-    var(--color-bg) 
-    url("../assets/images/hero-bg.jpg") 
-    no-repeat
-    50% 0;
+  background: var(--color-bg) url("../assets/images/hero-bg.jpg") no-repeat 50%
+    0;
   color: var(--color-primary);
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .container {
@@ -31,6 +32,13 @@ body {
 .header__navigation {
   display: flex;
   gap: 2.2rem;
+}
+
+.header__right-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.3rem;
 }
 
 .header__account {
@@ -226,7 +234,6 @@ body {
     font-size: 14px;
     line-height: 1.5;
   }
-
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
