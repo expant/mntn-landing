@@ -1,28 +1,6 @@
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-document.fonts.ready.then(() => {
-  gsap.set(".hero__title-xl", { opacity: 1 });
-
-  let split;
-  SplitText.create(".hero__title-xl", {
-    type: "words,lines",
-    linesClass: "line",
-    autoSplit: true,
-    mask: "lines",
-    onSplit: (self) => {
-      split = gsap.from(self.lines, {
-        duration: 1,
-        yPercent: 100,
-        opacity: 0,
-        stagger: 0.5,
-        ease: "expo.out",
-      });
-      return split;
-    },
-  });
-});
-
 const initMobileMenu = () => {
   const mobileMenuOpenBtn = document.querySelector(".header__mobile-menu");
   const mobileMenuExitBtn = document.querySelector(".mobile-menu__exit");
@@ -73,10 +51,13 @@ const initMobileMenu = () => {
 };
 
 const initOnScroll = () => {
-  gsap.utils.toArray(".content__item-img").forEach((el) => {
+  const contentNums = gsap.utils.toArray(".content__text-num");
+  const contentImgs = gsap.utils.toArray(".content__item-img");
+
+  contentNums.forEach((el) => {
     gsap.from(el, {
-      x: 100,
       opacity: 0,
+      x: -200,
       duration: 1,
       scrollTrigger: {
         trigger: el,
@@ -84,12 +65,46 @@ const initOnScroll = () => {
       },
     });
   });
-}
+
+  contentImgs.forEach((el) => {
+    gsap.from(el, {
+      x: 100,
+      duration: 1,
+      scrollTrigger: {
+        trigger: el,
+        start: "top center",
+      },
+    });
+  });
+
+  document.fonts.ready.then(() => {
+    gsap.set(".hero__title-xl", { opacity: 1 });
+
+    let split;
+    SplitText.create(".hero__title-xl", {
+      type: "words,lines",
+      linesClass: "line",
+      autoSplit: true,
+      mask: "lines",
+      onSplit: (self) => {
+        split = gsap.from(self.lines, {
+          duration: 1,
+          yPercent: 100,
+          opacity: 0,
+          stagger: 0.5,
+          ease: "expo.out",
+        });
+        return split;
+      },
+    });
+  });
+};
 
 const initHoverReveal = () => {
- const hoverElements = gsap.utils.toArray(".mobile-menu__item-link");
+  const mobileMenuItems = gsap.utils.toArray(".mobile-menu__item-link");
+  const desktopMenuItems = gsap.utils.toArray(".menu__item-link");
 
-  hoverElements.forEach((el) => {
+  [...mobileMenuItems, ...desktopMenuItems].forEach((el) => {
     const original = el.querySelector(".original");
     const reveal = el.querySelector(".reveal");
 

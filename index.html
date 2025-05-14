@@ -61,9 +61,24 @@
       <header class="header">
         <div class="header__page-title page-title"><a href="#">MNTN</a></div>
         <nav class="header__navigation">
-          <div class="header__navigation-item"><a href="#">Equipment</a></div>
-          <div class="header__navigation-item"><a href="#">About us</a></div>
-          <div class="header__navigation-item"><a href="#">Blog</a></div>
+          <div class="header__navigation-item">
+            <a href="#" class="menu__item-link">
+              <span class="original menu__item-link-text">Equipment</span>
+              <span class="reveal menu__item-link-text">Equipment</span>
+            </a>
+          </div>
+          <div class="header__navigation-item">
+            <a href="#" class="menu__item-link">
+              <span class="original menu__item-link-text">About us</span>
+              <span class="reveal menu__item-link-text">About us</span>
+            </a>
+          </div>
+          <div class="header__navigation-item">
+            <a href="#" class="menu__item-link">
+              <span class="original menu__item-link-text">Blog</span>
+              <span class="reveal menu__item-link-text">Blog</span>
+            </a>
+          </div>
         </nav>
         <div class="header__right-side">
           <div class="header__account">
@@ -72,7 +87,7 @@
               src="./assets/icons/account.svg"
               alt="account"
             />
-            <span>Account</span>
+            <button class="header__account-btn">Account</button>
           </div>
           <div class="header__mobile-menu">
             <img
@@ -88,16 +103,20 @@
           <div class="hero">
             <div class="hero__follow-us">
               <div class="hero__follow-us-text">Follow us</div>
-              <img
-                class="hero__follow-us-icon"
-                src="./assets/icons/instagram.svg"
-                alt="instagram"
-              />
-              <img
-                class="hero__follow-us-icon"
-                src="./assets/icons//twitter.svg"
-                alt="twitter"
-              />
+              <a href="#">
+                <img
+                  class="hero__follow-us-icon"
+                  src="./assets/icons/instagram.svg"
+                  alt="instagram"
+                />
+              </a>
+              <a href="#">
+                <img
+                  class="hero__follow-us-icon"
+                  src="./assets/icons//twitter.svg"
+                  alt="twitter"
+                />
+              </a>
             </div>
             <div class="hero__title">
               <h3 class="hero__title-md subtitle">A Hiking guide</h3>
@@ -138,7 +157,7 @@
                   expert, or expert backpacker?
                 </p>
                 <button class="content__text-btn">
-                  read more
+                  <span class="content__text-btn-text">read more</span>
                   <img
                     class="content__text-btn-arrow"
                     src="./assets/icons/arrow_right.svg"
@@ -172,7 +191,7 @@
                   which will get heavy and chafe wif they get sweaty or wet.
                 </p>
                 <button class="content__text-btn">
-                  read more
+                  <span class="content__text-btn-text">read more</span>
                   <img
                     class="content__text-btn-arrow"
                     src="./assets/icons/arrow_right.svg"
@@ -197,7 +216,7 @@
                   junction..
                 </p>
                 <button class="content__text-btn">
-                  <div>read more</div>
+                  <span class="content__text-btn-text">read more</span>
                   <img
                     class="content__text-btn-arrow"
                     src="./assets/icons/arrow_right.svg"
@@ -228,19 +247,31 @@
             <div class="footer__more-item">
               <div class="footer__more-item-title">More on The Blog</div>
               <nav class="footer__more-item-nav">
-                <div><a href="#">About MNTN</a></div>
-                <div><a href="#">Contributors & Writers</a></div>
-                <div><a href="#">Write For Us</a></div>
-                <div><a href="#">Contact Us</a></div>
-                <div><a href="#">Privacy Policy</a></div>
+                <div>
+                  <a class="more-item-nav__link" href="#">About MNTN</a>
+                </div>
+                <div>
+                  <a class="more-item-nav__link" href="#"
+                    >Contributors & Writers</a
+                  >
+                </div>
+                <div>
+                  <a class="more-item-nav__link" href="#">Write For Us</a>
+                </div>
+                <div>
+                  <a class="more-item-nav__link" href="#">Contact Us</a>
+                </div>
+                <div>
+                  <a class="more-item-nav__link" href="#">Privacy Policy</a>
+                </div>
               </nav>
             </div>
             <div class="footer__more-item">
               <div class="footer__more-item-title">More on MNTN</div>
               <nav class="footer__more-item-nav">
-                <div><a href="#">The Team</a></div>
-                <div><a href="#">Jobs</a></div>
-                <div><a href="#">Press</a></div>
+                <div><a class="more-item-nav__link" href="#">The Team</a></div>
+                <div><a class="more-item-nav__link" href="#">Jobs</a></div>
+                <div><a class="more-item-nav__link" href="#">Press</a></div>
               </nav>
             </div>
           </div>
